@@ -1,0 +1,23 @@
+{
+  "name": "simjd",
+  "version": "1.0.0",
+  "description": "This is a test for jd\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[D\u001b[D of\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[C\u001b[C\u001b[ simulate the jd.com.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lessCommander/simJD.git"
+  },
+  "author": "ls",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lessCommander/simJD/issues"
+  },
+  "homepage": "https://github.com/lessCommander/simJD#readme",
+  "devDependencies": {
+    "webpack": "^4.28.4",
+    "webpack-cli": "^3.2.1"
+  }
+}
