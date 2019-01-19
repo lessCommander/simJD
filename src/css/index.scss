@@ -1,0 +1,13 @@
+body, div{
+    margin: 0;
+    padding: 0;
+}
+
+$info: #123456;
+$w: 200px !default;
+
+.box{
+    width: $w;
+    height: 100px;
+    background-color: $info;
+}
