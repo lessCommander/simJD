@@ -1,10 +1,74 @@
-body, div {
-  margin: 0;
-  padding: 0;
+@charset "UTF-8";
+@import url(./base.css);
+/* sass自定义 */
+.main-container {
+  background-color: #eee;
 }
 
-.box {
-  width: 200px;
-  height: 100px;
-  background-color: #123456;
+/*顶部广告*/
+.top-banner {
+  min-height: 80px;
+  background-color: #be8b4c;
+}
+
+.top-banner-inner {
+  width: 1190px;
+  margin: 0 auto;
+  height: 80px;
+}
+
+.top-banner-inner a {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/top-banner.jpg");
+}
+
+/*顶部导航条*/
+.shortcut {
+  background-color: #e3e4e5;
+}
+
+.shortcut .shortcut-inner {
+  height: 30px;
+  line-height: 30px;
+  margin: 0 auto;
+}
+
+.shortcut .shortcut-inner .fl {
+  margin-left: 300px;
+}
+
+.shortcut .shortcut-inner .shortcut-inner-right {
+  height: 30px;
+  width: 800px;
+}
+
+.shortcut .shortcut-inner .shortcut-inner-right li {
+  float: left;
+  margin-right: 10px;
+}
+
+.shortcut .shortcut-inner .shortcut-inner-right li a {
+  padding: 2px;
+  color: #999;
+}
+
+.shortcut .shortcut-inner .shortcut-inner-right li a:hover {
+  color: #f10215;
+}
+
+.shortcut .shortcut-inner .shortcut-inner-right li::after {
+  content: "|";
+  color: #999;
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.shortcut .shortcut-inner .shortcut-inner-right li:last-child::after {
+  content: "";
+}
+
+.shortcut .shortcut-inner .shortcut-inner-right .hot {
+  color: #f10215;
 }

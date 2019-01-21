@@ -1,29 +1,42 @@
 let path = require('path'),
-    webpack = require('webpack');
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
+    ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
     mode: 'development',
-    entry: './index.js',
+    entry: './src/index.js',
     output: {
         path: path.join(__dirname, 'dist'),
+        publicPath: 'dist/',
         filename: 'bundle.js'
     },
     module: {
         rules: [
             {
                 test: /\.(css|sass|scss)$/,
-                use: [{
-                    loader: 'style-loader'
-                },{
-                    loader: 'css-loader'
-                },{
-                    loader: 'sass-loader'
-                }]
+                loader: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
-                test: /\.(png|jpg|gif)$/,
-                use: 'file-loader'
+                test: /\.(png|jpg)$/,
+　　　　　　     loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]'
+            },
+            {
+                test: /\.(htm|html)$/,
+                loader: ['html-withimg-loader']
             }
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: "src/index.html"
+        },
+        new ExtractTextPlugin("style.css"))
+    ], // 配置html,css插件
+    devServer:{
+        contentBase:path.resolve(__dirname, 'dist'),
+        host:'127.0.0.1',
+        compress:true,
+        port:8080
+    } // 配置webpack服务
 };

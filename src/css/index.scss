@@ -1,13 +1,64 @@
-body, div{
-    margin: 0;
-    padding: 0;
+@import './base.css';
+@import './tool.scss';
+
+.main-container {
+    background-color: #eee;
 }
 
-$info: #123456;
-$w: 200px !default;
+/*顶部广告*/
+.top-banner {
+    min-height: 80px;
+    background-color: rgb(190, 139, 76);
 
-.box{
-    width: $w;
-    height: 100px;
-    background-color: $info;
+    @at-root .top-banner-inner {
+        width: 1190px;
+        margin: 0 auto;
+        height: 80px;
+        a {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            background-image: url("../images/top-banner.jpg");
+        }
+    }
+}
+
+/*顶部导航条*/
+.shortcut{
+    background-color: #e3e4e5;
+    .shortcut-inner{
+        height: 30px;
+        line-height: 30px;
+        margin: 0 auto;
+        .fl{
+            margin-left: 300px;
+        }
+        .shortcut-inner-right{
+            height: 30px;
+            width: 800px;
+            li{
+                float: left;
+                margin-right: 10px;
+                a{
+                    padding: 2px;
+                    color: $grey;
+                    &:hover{
+                        color: $hot-red;
+                    }
+                }
+                &::after{
+                    content: "|";
+                    color: $grey;
+                    font-size: 12px;
+                    margin-left: 10px;
+                }
+                &:last-child::after{
+                    content: "";
+                }
+            }
+            .hot{
+                color: $hot-red;
+            }
+        }
+    }
 }
