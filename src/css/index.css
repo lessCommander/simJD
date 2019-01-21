@@ -1,6 +1,21 @@
 @charset "UTF-8";
 @import url(./base.css);
 /* sass自定义 */
+.city-dropdown .city-current, .myjd-dropdown .myjd-current, .cg-dropdown .cg-current, .customer-dropdown .customer-current {
+  width: 60px;
+  text-align: center;
+  padding-left: 5px;
+  color: #999;
+}
+
+.myjd-dropdown .myjd-wrap .split2, .customer-dropdown .customer-wrap .split2 {
+  float: left;
+  height: 1px;
+  width: 100%;
+  margin: 5px 0;
+  border-top: 1px solid #eee;
+}
+
 .main-container {
   background-color: #eee;
 }
@@ -32,102 +47,232 @@
 }
 
 .shortcut .shortcut-inner {
-  height: 30px;
-  line-height: 30px;
+  height: 32px;
+  line-height: 32px;
   margin: 0 auto;
   position: relative;
 }
 
-#city-dropdown {
+.city-dropdown {
   position: absolute;
   left: 200px;
   top: 0;
 }
 
 .shortcut .shortcut-inner .shortcut-inner-right {
-  height: 30px;
-  width: 700px;
+  line-height: 30px;
+  width: 760px;
   position: absolute;
   right: 0;
   top: 0;
 }
 
-.shortcut .shortcut-inner .shortcut-inner-right li {
+.shortcut .shortcut-inner .shortcut-inner-right .sc-item {
   float: left;
-  margin-right: 10px;
+  margin: 0 5px;
+  border: 1px solid #e3e4e5;
+  border-bottom: none;
 }
 
-.shortcut .shortcut-inner .shortcut-inner-right li a {
-  padding: 2px;
+.shortcut .shortcut-inner .shortcut-inner-right .sc-item a {
+  display: inline-block;
+  width: 70px;
+  height: 30px;
   color: #999;
 }
 
-.shortcut .shortcut-inner .shortcut-inner-right li a:hover {
+.shortcut .shortcut-inner .shortcut-inner-right .sc-item a:hover {
   color: #f10215;
 }
 
-.shortcut .shortcut-inner .shortcut-inner-right li::after {
-  content: "|";
-  color: #999;
+.shortcut .shortcut-inner .shortcut-inner-right .split1 {
+  float: left;
+  width: 1px;
+  height: 10px;
+  background-color: #999;
+  margin: 11px 4px;
   font-size: 12px;
-  margin-left: 10px;
-}
-
-.shortcut .shortcut-inner .shortcut-inner-right li:last-child::after {
-  content: "";
+  overflow: hidden;
 }
 
 .shortcut .shortcut-inner .shortcut-inner-right .hot {
   color: #f10215;
 }
 
+.sc-login {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 /*城市列表*/
-#dropdown-menu {
-  position: relative;
+.dropdown-menu {
   display: none;
 }
 
-#city-dropdown .city-current {
-  width: 60px;
-  text-align: center;
-  padding: 0 5px;
+/*顶端导航统一下拉菜单*/
+.shortcut-dropdown.hover .dropdown-menu {
+  display: block;
 }
 
-#city-dropdown .city-wrap {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 11;
-  width: 337px;
-  border: 1px solid #eee;
-  border-top-color: transparent;
-  padding: 5px;
+.shortcut-dropdown.hover .dropdown-current {
   background-color: #fff;
+  border-bottom-color: transparent;
 }
 
-#city-dropdown .city-wrap .city {
+.city-dropdown {
+  position: relative;
+}
+
+.city-dropdown .city-current .icon-location {
+  color: #f10215;
+}
+
+.city-dropdown .city-wrap {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 1;
+  border: 1px solid #ddd;
+  border-top-color: transparent;
+  background-color: #fff;
+  width: 337px;
+  padding: 5px;
+}
+
+.city-dropdown .city-wrap .city {
   float: left;
-  margin: 0 10px;
+  margin: 0 5px;
+  width: 46px;
+  height: 30px;
 }
 
-#city-dropdown .city-wrap .city a {
+.city-dropdown .city-wrap .city a {
   display: block;
   padding: 0 5px;
+  text-align: center;
+  color: #999;
 }
 
-#city-dropdown .city-wrap .city a:hover {
+.city-dropdown .city-wrap .city a:hover {
   color: #f10215;
   background-color: #f4f4f4;
 }
 
-#city-dropdown.hover #dropdown-menu {
-  display: block;
+.myjd-dropdown {
+  position: relative;
 }
 
-#city-dropdown.hover .city-current {
+.myjd-dropdown .myjd-wrap {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 1;
+  border: 1px solid #ddd;
+  border-top-color: transparent;
   background-color: #fff;
-  border: 1px solid #eee;
-  border-bottom-color: transparent;
+  width: 220px;
+  padding: 5px;
+}
+
+.myjd-dropdown .myjd-wrap .myjd {
+  float: left;
+  margin: 0 5px;
+  width: 100px;
+  height: 26px;
+}
+
+.myjd-dropdown .myjd-wrap .myjd a {
+  display: block;
+  padding: 0 5px;
+  text-align: left;
+  color: #999;
+}
+
+.myjd-dropdown .myjd-wrap .myjd a:hover {
+  color: #f10215;
+  background-color: #fff;
+}
+
+.cg-dropdown {
+  position: relative;
+}
+
+.cg-dropdown .cg-current {
+  color: #f10215 !important;
+}
+
+.cg-dropdown .cg-wrap {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  z-index: 1;
+  border: 1px solid #ddd;
+  border-top-color: transparent;
+  background-color: #fff;
+  width: 180px;
+  padding: 5px;
+}
+
+.cg-dropdown .cg-wrap .cg {
+  float: left;
+  margin: 0 5px;
+  width: 75px;
+  height: 26px;
+}
+
+.cg-dropdown .cg-wrap .cg a {
+  display: block;
+  padding: 0 5px;
+  text-align: left;
+  color: #999;
+}
+
+.cg-dropdown .cg-wrap .cg a:hover {
+  color: #f10215;
+  background-color: #fff;
+}
+
+.customer-dropdown {
+  position: relative;
+}
+
+.customer-dropdown .customer-wrap {
+  position: absolute;
+  top: 30px;
+  left: -101px;
+  z-index: 1;
+  border: 1px solid #ddd;
+  border-top-color: transparent;
+  background-color: #fff;
+  width: 160px;
+  padding: 5px;
+}
+
+.customer-dropdown .customer-wrap .customer {
+  float: left;
+  margin: 0 5px;
+  width: 70px;
+  height: 26px;
+}
+
+.customer-dropdown .customer-wrap .customer a {
+  display: block;
+  padding: 0 5px;
+  text-align: left;
+  color: #999;
+}
+
+.customer-dropdown .customer-wrap .customer a:hover {
+  color: #f10215;
+  background-color: #fff;
+}
+
+.customer-dropdown .customer-wrap .customer-bold {
+  color: #666;
+  font-weight: bold;
+  width: 140px;
+  padding: 0 5px;
 }
 
 /*左侧导航*/

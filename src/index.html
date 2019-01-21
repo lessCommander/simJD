@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>仿京东页面</title>
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1025937_v7k9xm2h7jr.css">
     <!-- <link rel="stylesheet" href="css/base.css"> -->
     <!-- <link rel="stylesheet" href="css/index.css"> -->
 </head>
@@ -21,58 +22,270 @@
         <!-- 顶端导航 -->
         <div class="shortcut clearfix">
             <div class="shortcut-inner">
-                <div id="city-dropdown">
-                    <div class="city-current">上海</div>
-                    <div id="dropdown-menu">
+                <div class="city-dropdown shortcut-dropdown">
+                    <div class="city-current dropdown-current">
+                        <i class="iconfont icon-location"></i>上海
+                    </div>
+                    <div class="dropdown-menu">
                         <ul class="city-wrap clearfix">
-                            <li class="city"><a href="#">北京</a></li>
-                            <li class="city"><a href="#">上海</a></li>
-                            <li class="city"><a href="#">天津</a></li>
-                            <li class="city"><a href="#">重庆</a></li>
-                            <li class="city"><a href="#">河北</a></li>
-                            <li class="city"><a href="#">山西</a></li>
-                            <li class="city"><a href="#">河南</a></li>
-                            <li class="city"><a href="#">辽宁</a></li>
-                            <li class="city"><a href="#">吉林</a></li>
-                            <li class="city"><a href="#">黑龙</a></li>
-                            <li class="city"><a href="#">江内</a></li>
-                            <li class="city"><a href="#">蒙古</a></li>
-                            <li class="city"><a href="#">江苏</a></li>
-                            <li class="city"><a href="#">山东</a></li>
-                            <li class="city"><a href="#">安徽</a></li>
-                            <li class="city"><a href="#">浙江</a></li>
-                            <li class="city"><a href="#">福建</a></li>
-                            <li class="city"><a href="#">湖北</a></li>
-                            <li class="city"><a href="#">湖南</a></li>
-                            <li class="city"><a href="#">广东</a></li>
-                            <li class="city"><a href="#">广西</a></li>
-                            <li class="city"><a href="#">江西</a></li>
-                            <li class="city"><a href="#">四川</a></li>
-                            <li class="city"><a href="#">海南</a></li>
-                            <li class="city"><a href="#">贵州</a></li>
-                            <li class="city"><a href="#">云南</a></li>
-                            <li class="city"><a href="#">西藏</a></li>
-                            <li class="city"><a href="#">陕西</a></li>
-                            <li class="city"><a href="#">甘肃</a></li>
-                            <li class="city"><a href="#">青海</a></li>
-                            <li class="city"><a href="#">宁夏</a></li>
-                            <li class="city"><a href="#">新疆</a></li>
-                            <li class="city"><a href="#">港澳</a></li>
-                            <li class="city"><a href="#">台湾</a></li>
-                            <li class="city"><a href="#">海外</a></li>
-                            <li class="city"><a href="#">钓鱼岛</a></li>
+                            <li class="city">
+                                <a href="#">北京</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">上海</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">天津</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">重庆</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">河北</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">山西</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">河南</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">辽宁</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">吉林</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">黑龙江</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">内蒙古</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">江苏</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">山东</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">安徽</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">浙江</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">福建</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">湖北</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">湖南</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">广东</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">广西</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">江西</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">四川</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">海南</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">贵州</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">云南</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">西藏</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">陕西</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">甘肃</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">青海</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">宁夏</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">新疆</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">港澳</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">台湾</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">海外</a>
+                            </li>
+                            <li class="city">
+                                <a href="#">钓鱼岛</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
                 <ul class="shortcut-inner-right">
-                    <li><a href="#"><span>你好，请登录</span>&nbsp;<span class="hot">免费注册</span></a></li>
-                    <li><a href="#">我的订单</a></li>
-                    <li><a href="#">我的京东</a></li>
-                    <li><a href="#">京东会员</a></li>
-                    <li><a href="#">企业采购</a></li>
-                    <li><a href="#">客户服务</a></li>
-                    <li><a href="#">网站导航</a></li>
-                    <li><a href="#">手机京东</a></li>
+                    <li class="sc-item">
+                        <a href="#" class="sc-login">
+                            <span>你好，请登录</span>&nbsp;
+                            <span class="hot">免费注册</span>
+                        </a>
+                    </li>
+                    <li class="split1"></li>
+                    <li class="sc-item">
+                        <a href="#">我的订单</a>
+                    </li>
+                    <li class="split1"></li>
+                    <li class="sc-item myjd-dropdown shortcut-dropdown">
+                        <a href="#" class="myjd-current dropdown-current">
+                            我的京东
+                            <i class="iconfont icon-xiajiantou"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <ul class="myjd-wrap">
+                                <li class="myjd">
+                                    <a href="#">待处理订单</a>
+                                </li>
+                                <li class="myjd">
+                                    <a href="#">消息</a>
+                                </li>
+                                <li class="myjd">
+                                    <a href="#">返修退换货</a>
+                                </li>
+                                <li class="myjd">
+                                    <a href="#">我的问答</a>
+                                </li>
+                                <li class="myjd">
+                                    <a href="#">降价商品</a>
+                                </li>
+                                <li class="myjd">
+                                    <a href="#">我的关注</a>
+                                </li>
+                                <li class="split2"></li>
+                                <li class="myjd">
+                                    <a href="#">我的京豆</a>
+                                </li>
+                                <li class="myjd">
+                                    <a href="#">我的优惠券</a>
+                                </li>
+                                <li class="myjd">
+                                    <a href="#">我的白条</a>
+                                </li>
+                                <li class="myjd">
+                                    <a href="#">我的理财</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="split1"></li>
+                    <li class="sc-item">
+                        <a href="#">京东会员</a>
+                    </li>
+                    <li class="split1"></li>
+                    <li class="sc-item cg-dropdown shortcut-dropdown">
+                        <a href="#" class="cg-current dropdown-current">
+                            企业采购
+                            <i class="iconfont icon-xiajiantou"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <ul class="cg-wrap clearfix">
+                                <li class="cg">
+                                    <a href="#">企业购</a>
+                                </li>
+                                <li class="cg">
+                                    <a href="#">商用场景馆</a>
+                                </li>
+                                <li class="cg">
+                                    <a href="#">工业品</a>
+                                </li>
+                                <li class="cg">
+                                    <a href="#">礼品卡</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="split1"></li>
+                    <li class="sc-item customer-dropdown shortcut-dropdown hover">
+                        <a href="#" class="customer-current dropdown-current">
+                            客户服务
+                            <i class="iconfont icon-xiajiantou"></i>
+                        </a>
+                        <div class="dropdown-menu">
+                            <ul class="customer-wrap clearfix">
+                                <li class="customer customer-bold">
+                                    <span href="#">客户</span>
+                                </li>
+                                <li class="customer">
+                                    <a href="#">帮助中心</a>
+                                </li>
+                                <li class="customer">
+                                    <a href="#">售后服务</a>
+                                </li>
+                                <li class="customer">
+                                    <a href="#">在线客服</a>
+                                </li>
+                                <li class="customer">
+                                    <a href="#">意见建议</a>
+                                </li>
+                                <li class="customer">
+                                    <a href="#">电话客服</a>
+                                </li>
+                                <li class="customer">
+                                    <a href="#">客服邮箱</a>
+                                </li>
+                                <li class="customer">
+                                    <a href="#">金融咨询</a>
+                                </li>
+                                <li class="customer">
+                                    <a href="#">全球售客服</a>
+                                </li>
+                                <li class="split2"></li>
+                                <li class="customer customer-bold">
+                                    <span href="#">商户</span>
+                                </li>
+                                <li class="customer">
+                                    <a href="#">合作招商</a>
+                                </li>
+                                <li class="customer">
+                                    <a href="#">学习中心</a>
+                                </li>
+                                <li class="customer">
+                                    <a href="#">商家后台</a>
+                                </li>
+                                <li class="customer">
+                                    <a href="#">京麦工作台</a>
+                                </li>
+                                <li class="customer">
+                                    <a href="#">商家帮助</a>
+                                </li>
+                                <li class="customer">
+                                    <a href="#">规则平台</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="split1"></li>
+                    <li class="sc-item">
+                        <a href="#">网站导航
+                            <i class="iconfont icon-xiajiantou"></i>
+                        </a>
+                    </li>
+                    <li class="split1"></li>
+                    <li class="sc-item">
+                        <a href="#">手机京东</a>
+                    </li>
                 </ul>
             </div>
         </div>

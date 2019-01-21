@@ -23,6 +23,10 @@ module.exports = {
 　　　　　　     loader: 'url-loader?limit=8192&name=images/[hash:8].[name].[ext]'
             },
             {
+                test: /\.(eot|ttf|woff|svg)$/,
+                use: 'file-loader'
+            },
+            {
                 test: /\.(htm|html)$/,
                 loader: ['html-withimg-loader']
             }

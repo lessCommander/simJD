@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "sass": "node-sass --output-style expanded --watch ./src/css/index.scss ./src/css/index.css",
     "build": "webpack",
-    "dev": "webpack-dev-server --hot --inline true"
+    "dev": "webpack-dev-server --hot --progress --color --inline true"
   },
   "repository": {
     "type": "git",

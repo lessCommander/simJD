@@ -29,40 +29,44 @@
     min-width: 990px;
     font-size: 12px;
     .shortcut-inner{
-        height: 30px;
-        line-height: 30px;
+        height: 32px;
+        line-height: 32px;
         margin: 0 auto;
         position: relative;
-        @at-root #city-dropdown{
+        @at-root .city-dropdown{
             position: absolute;
             left: 200px;
             top: 0;
         }
         .shortcut-inner-right{
-            height: 30px;
-            width: 700px;
+            line-height: 30px;
+            width: 760px;
             position: absolute;
             right: 0;
             top: 0;
-            li{
+            .sc-item{
                 float: left;
-                margin-right: 10px;
+                margin: 0 5px;
+                border: 1px solid #e3e4e5;
+                border-bottom: none;
                 a{
-                    padding: 2px;
+                    display: inline-block;
+                    width: 70px;
+                    height: 30px;
                     color: $grey;
                     &:hover{
                         color: $hot-red;
                     }
                 }
-                &::after{
-                    content: "|";
-                    color: $grey;
-                    font-size: 12px;
-                    margin-left: 10px;
-                }
-                &:last-child::after{
-                    content: "";
-                }
+            }
+            .split1{
+                float: left;
+                width: 1px;
+                height: 10px;
+                background-color: $grey;
+                margin: 11px 4px;
+                font-size: 12px;
+                overflow: hidden;
             }
             .hot{
                 color: $hot-red;
@@ -70,54 +74,94 @@
         }
     }
 }
+// 登录项超出部分隐藏
+.sc-login{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 /*城市列表*/
-#dropdown-menu{
-    position: relative;
+.dropdown-menu{
     display: none;
 }
-#city-dropdown{
-    .city-current{
-        width: 60px;
-        text-align: center;
-        padding: 0 5px;
-    }
-    .city-wrap{
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 11;
-        width: 337px;
-        border: 1px solid #eee;
-        border-top-color: transparent;
-        padding: 5px;
-        background-color: #fff;
-        .city{
-            float: left;
-            margin: 0 10px;
-            a{
-                display: block;
-                padding: 0 5px;
-                &:hover{
-                    color: $hot-red;
-                    background-color: #f4f4f4;
-                }
-            }
-        }
-    }
-}
-#city-dropdown.hover{
-    #dropdown-menu{
+/*顶端导航统一下拉菜单*/
+.shortcut-dropdown.hover{
+    .dropdown-menu{
         display: block;
     }
-}
-#city-dropdown.hover{
-    .city-current{
+    .dropdown-current{
         background-color: #fff;
-        border: 1px solid #eee;
         border-bottom-color: transparent;
     }
 }
-
+// 城市列表下拉菜单
+.city-dropdown{
+    position: relative;
+    .city-current{
+        @extend %sc-dropdown-cur;
+        .icon-location{
+            color: $hot-red;
+        }
+    }
+    .city-wrap{
+        @include sc-dropdown-wrap(337px);
+        .city{
+            @include sc-dropdown-item(46px, 30px, #f4f4f4, center);
+        }
+    }
+}
+// 我的京东下拉菜单
+.myjd-dropdown{
+    position: relative;
+    .myjd-current{
+        @extend %sc-dropdown-cur;
+    }
+    .myjd-wrap{
+        @include sc-dropdown-wrap(220px);
+        .myjd{
+            @include sc-dropdown-item(100px, 26px);
+        }
+        .split2{
+            @extend %split2;
+        }
+    }
+}
+// 企业采购下拉菜单
+.cg-dropdown{
+    position: relative;
+    .cg-current{
+        color: $hot-red !important;
+        @extend %sc-dropdown-cur;
+    }
+    .cg-wrap{
+        @include sc-dropdown-wrap(180px);
+        .cg{
+            @include sc-dropdown-item(75px, 26px);
+        }
+    }
+}
+// 客户服务下拉菜单
+.customer-dropdown{
+    position: relative;
+    .customer-current{
+        @extend %sc-dropdown-cur;
+    }
+    .customer-wrap{
+        @include sc-dropdown-wrap(160px, -101px);
+        .customer{
+            @include sc-dropdown-item(70px, 26px);
+        }
+        .split2{
+            @extend %split2;
+        }
+        .customer-bold{
+            color: #666;
+            font-weight: bold;
+            width: 140px;
+            padding: 0 5px;
+        }
+    }
+}
 
 /*左侧导航*/
 .sidebar{

@@ -2,11 +2,10 @@ import './css/index.css';
 
 (function(){
     let handler = {
-        cityMenu: null,
-        showCityMenu: function(){
+        showMenu: function(){
             this.classList.add('hover');
         },
-        hideCityMenu: function(){
+        hideMenu: function(){
             this.classList.remove('hover');
         }
     };
@@ -16,11 +15,12 @@ import './css/index.css';
     };
 
     let bindEvent = function(){
-        let cityDrop = document.getElementById('city-dropdown');
+        let dropdown = document.querySelectorAll('.shortcut-dropdown');
 
-        // handler.cityMenu = document.getElementById('dropdown-menu');
-        cityDrop.addEventListener('mouseover', handler.showCityMenu, false);
-        cityDrop.addEventListener('mouseleave', handler.hideCityMenu, false);
+        for(let item of dropdown){
+            item.addEventListener('mouseover', handler.showMenu, false);
+            item.addEventListener('mouseleave', handler.hideMenu, false);
+        }
     }
 
     init();
