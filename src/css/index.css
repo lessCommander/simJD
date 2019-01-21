@@ -27,21 +27,29 @@
 /*顶部导航条*/
 .shortcut {
   background-color: #e3e4e5;
+  min-width: 990px;
+  font-size: 12px;
 }
 
 .shortcut .shortcut-inner {
   height: 30px;
   line-height: 30px;
   margin: 0 auto;
+  position: relative;
 }
 
-.shortcut .shortcut-inner .fl {
-  margin-left: 300px;
+#city-dropdown {
+  position: absolute;
+  left: 200px;
+  top: 0;
 }
 
 .shortcut .shortcut-inner .shortcut-inner-right {
   height: 30px;
-  width: 800px;
+  width: 700px;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 .shortcut .shortcut-inner .shortcut-inner-right li {
@@ -71,4 +79,70 @@
 
 .shortcut .shortcut-inner .shortcut-inner-right .hot {
   color: #f10215;
+}
+
+/*城市列表*/
+#dropdown-menu {
+  position: relative;
+  display: none;
+}
+
+#city-dropdown .city-current {
+  width: 60px;
+  text-align: center;
+  padding: 0 5px;
+}
+
+#city-dropdown .city-wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  width: 337px;
+  border: 1px solid #eee;
+  border-top-color: transparent;
+  padding: 5px;
+  background-color: #fff;
+}
+
+#city-dropdown .city-wrap .city {
+  float: left;
+  margin: 0 10px;
+}
+
+#city-dropdown .city-wrap .city a {
+  display: block;
+  padding: 0 5px;
+}
+
+#city-dropdown .city-wrap .city a:hover {
+  color: #f10215;
+  background-color: #f4f4f4;
+}
+
+#city-dropdown.hover #dropdown-menu {
+  display: block;
+}
+
+#city-dropdown.hover .city-current {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-bottom-color: transparent;
+}
+
+/*左侧导航*/
+.sidebar {
+  width: 200px;
+  height: 600px;
+  background-color: #abcdef;
+  display: inline-block;
+}
+
+/*右侧主体*/
+.section {
+  width: 600px;
+  height: 600px;
+  margin-left: 15px;
+  background-color: orchid;
+  display: inline-block;
 }

@@ -7,14 +7,16 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.join(__dirname, 'dist'),
-        publicPath: 'dist/',
         filename: 'bundle.js'
     },
     module: {
         rules: [
             {
                 test: /\.(css|sass|scss)$/,
-                loader: ['style-loader', 'css-loader', 'sass-loader']
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: ['css-loader', 'sass-loader']
+                })
             },
             {
                 test: /\.(png|jpg)$/,
@@ -30,8 +32,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: "src/index.html"
-        },
-        new ExtractTextPlugin("style.css"))
+        }),
+        new ExtractTextPlugin("index.css")
     ], // 配置html,css插件
     devServer:{
         contentBase:path.resolve(__dirname, 'dist'),
