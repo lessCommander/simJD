@@ -26,29 +26,29 @@
 /*顶部导航条*/
 .shortcut{
     background-color: #e3e4e5;
-    min-width: 990px;
+    min-width: 1190px;
     font-size: 12px;
     .shortcut-inner{
-        height: 32px;
-        line-height: 32px;
+        height: 31px;
+        line-height: 31px;
         margin: 0 auto;
         position: relative;
-        @at-root .city-dropdown{
-            position: absolute;
-            left: 200px;
-            top: 0;
-        }
         .shortcut-inner-right{
-            line-height: 30px;
-            width: 760px;
+            height: 31px;
+            line-height: 31px;
+            width: 790px;
             position: absolute;
             right: 0;
             top: 0;
             .sc-item{
+                width: 75px;
+                height: 30px;
+                line-height: 30px;
                 float: left;
-                margin: 0 5px;
+                margin: 0 3px;
                 border: 1px solid #e3e4e5;
                 border-bottom: none;
+                text-align: center;
                 a{
                     display: inline-block;
                     width: 70px;
@@ -74,37 +74,49 @@
         }
     }
 }
+.city-dropdown{
+    position: absolute;
+    left: 200px;
+    top: 0;
+}
 // 登录项超出部分隐藏
 .sc-login{
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    width: 130px !important;
+    height: 32px;
+    a{
+        width: 100% !important;
+    }
 }
+
 /*城市列表*/
 .dropdown-menu{
     display: none;
 }
 /*顶端导航统一下拉菜单*/
 .shortcut-dropdown.hover{
+    border: 1px solid #ddd !important;
+    border-bottom: none;
     .dropdown-menu{
         display: block;
     }
     .dropdown-current{
         background-color: #fff;
-        border-bottom-color: transparent;
     }
 }
 // 城市列表下拉菜单
 .city-dropdown{
-    position: relative;
+    border: 1px solid #e3e4e5;
+    border-bottom: none;
     .city-current{
+        height: 30px;
+        line-height: 30px;
         @extend %sc-dropdown-cur;
         .icon-location{
             color: $hot-red;
         }
     }
     .city-wrap{
-        @include sc-dropdown-wrap(337px);
+        @include sc-dropdown-wrap(337px, -1px);
         .city{
             @include sc-dropdown-item(46px, 30px, #f4f4f4, center);
         }
@@ -117,7 +129,7 @@
         @extend %sc-dropdown-cur;
     }
     .myjd-wrap{
-        @include sc-dropdown-wrap(220px);
+        @include sc-dropdown-wrap(220px, -1px);
         .myjd{
             @include sc-dropdown-item(100px, 26px);
         }
@@ -134,7 +146,7 @@
         @extend %sc-dropdown-cur;
     }
     .cg-wrap{
-        @include sc-dropdown-wrap(180px);
+        @include sc-dropdown-wrap(180px, -1px);
         .cg{
             @include sc-dropdown-item(75px, 26px);
         }
@@ -147,7 +159,7 @@
         @extend %sc-dropdown-cur;
     }
     .customer-wrap{
-        @include sc-dropdown-wrap(160px, -101px);
+        @include sc-dropdown-wrap(160px, -96px);
         .customer{
             @include sc-dropdown-item(70px, 26px);
         }

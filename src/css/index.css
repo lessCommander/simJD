@@ -3,7 +3,7 @@
 /* sass自定义 */
 .city-dropdown .city-current, .myjd-dropdown .myjd-current, .cg-dropdown .cg-current, .customer-dropdown .customer-current {
   width: 60px;
-  text-align: center;
+  line-height: 29px;
   padding-left: 5px;
   color: #999;
 }
@@ -42,36 +42,35 @@
 /*顶部导航条*/
 .shortcut {
   background-color: #e3e4e5;
-  min-width: 990px;
+  min-width: 1190px;
   font-size: 12px;
 }
 
 .shortcut .shortcut-inner {
-  height: 32px;
-  line-height: 32px;
+  height: 31px;
+  line-height: 31px;
   margin: 0 auto;
   position: relative;
 }
 
-.city-dropdown {
-  position: absolute;
-  left: 200px;
-  top: 0;
-}
-
 .shortcut .shortcut-inner .shortcut-inner-right {
-  line-height: 30px;
-  width: 760px;
+  height: 31px;
+  line-height: 31px;
+  width: 790px;
   position: absolute;
   right: 0;
   top: 0;
 }
 
 .shortcut .shortcut-inner .shortcut-inner-right .sc-item {
+  width: 75px;
+  height: 30px;
+  line-height: 30px;
   float: left;
-  margin: 0 5px;
+  margin: 0 3px;
   border: 1px solid #e3e4e5;
   border-bottom: none;
+  text-align: center;
 }
 
 .shortcut .shortcut-inner .shortcut-inner-right .sc-item a {
@@ -99,10 +98,19 @@
   color: #f10215;
 }
 
+.city-dropdown {
+  position: absolute;
+  left: 200px;
+  top: 0;
+}
+
 .sc-login {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  width: 130px !important;
+  height: 32px;
+}
+
+.sc-login a {
+  width: 100% !important;
 }
 
 /*城市列表*/
@@ -111,17 +119,27 @@
 }
 
 /*顶端导航统一下拉菜单*/
+.shortcut-dropdown.hover {
+  border: 1px solid #ddd !important;
+  border-bottom: none;
+}
+
 .shortcut-dropdown.hover .dropdown-menu {
   display: block;
 }
 
 .shortcut-dropdown.hover .dropdown-current {
   background-color: #fff;
-  border-bottom-color: transparent;
 }
 
 .city-dropdown {
-  position: relative;
+  border: 1px solid #e3e4e5;
+  border-bottom: none;
+}
+
+.city-dropdown .city-current {
+  height: 30px;
+  line-height: 30px;
 }
 
 .city-dropdown .city-current .icon-location {
@@ -131,9 +149,10 @@
 .city-dropdown .city-wrap {
   position: absolute;
   top: 30px;
-  left: 0;
+  left: -1px;
   z-index: 1;
-  border: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
   border-top-color: transparent;
   background-color: #fff;
   width: 337px;
@@ -166,9 +185,10 @@
 .myjd-dropdown .myjd-wrap {
   position: absolute;
   top: 30px;
-  left: 0;
+  left: -1px;
   z-index: 1;
-  border: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
   border-top-color: transparent;
   background-color: #fff;
   width: 220px;
@@ -205,9 +225,10 @@
 .cg-dropdown .cg-wrap {
   position: absolute;
   top: 30px;
-  left: 0;
+  left: -1px;
   z-index: 1;
-  border: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
   border-top-color: transparent;
   background-color: #fff;
   width: 180px;
@@ -240,9 +261,10 @@
 .customer-dropdown .customer-wrap {
   position: absolute;
   top: 30px;
-  left: -101px;
+  left: -96px;
   z-index: 1;
-  border: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
   border-top-color: transparent;
   background-color: #fff;
   width: 160px;

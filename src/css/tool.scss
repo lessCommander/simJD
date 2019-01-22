@@ -5,18 +5,19 @@ $hot-red: #f10215;
 // 顶端下拉菜单当前项
 %sc-dropdown-cur {
     width: 60px;
-    text-align: center;
+    line-height: 29px;
     padding-left: 5px;
     color: $grey;
 }
 
 // 顶端导航下拉菜单
-@mixin sc-dropdown-wrap($width, $left: 0) {
+@mixin sc-dropdown-wrap($width, $left: 0px) {
     position: absolute;
     top: 30px;
     left: $left;
     z-index: 1;
-    border: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
     border-top-color: transparent;
     background-color: #fff;
     width: $width;
