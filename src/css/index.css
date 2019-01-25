@@ -48,6 +48,7 @@
 
 .shortcut .shortcut-inner {
   height: 31px;
+  width: 1190px;
   line-height: 31px;
   margin: 0 auto;
   position: relative;
@@ -300,12 +301,12 @@
 /*头部搜索栏*/
 .header {
   height: 140px;
-  padding: 0 20px;
 }
 
 .header-w {
-  width: 100%;
+  width: 1190px;
   height: 100%;
+  margin: 0 auto;
   position: relative;
 }
 
@@ -441,19 +442,84 @@
   margin-top: 30px;
 }
 
-/*左侧导航*/
-.sidebar {
-  width: 200px;
-  height: 600px;
-  background-color: #abcdef;
-  display: inline-block;
+/*主体内容*/
+.content-wrap {
+  position: relative;
 }
 
-/*右侧主体*/
-.section {
-  width: 600px;
-  height: 600px;
-  margin-left: 15px;
-  background-color: orchid;
-  display: inline-block;
+.content-wrap .content {
+  width: 1190px;
+  height: 480px;
+  position: relative;
+  margin: 0 auto;
+}
+
+/*左侧导航*/
+.sidebar {
+  background-color: #636363;
+  border-top: 1px solid #eee;
+  position: relative;
+}
+
+.sidebar .col1-list {
+  height: 480px;
+  padding-top: 6px;
+}
+
+.sidebar .col1-list .col1-item {
+  height: 26px;
+  line-height: 26px;
+  padding-left: 18px;
+}
+
+.sidebar .col1-list .col1-item:hover {
+  background-color: #d9d9d9;
+}
+
+.sidebar .col1-list .col1-item a {
+  color: #626262;
+}
+
+.sidebar .col1-list .col1-item a:hover {
+  color: #f10215;
+}
+
+.sidebar .col1-list .col1-item .split3 {
+  color: #626262;
+}
+
+/*左侧导航弹出菜单*/
+.sidebar-pop-wrap {
+  width: 798px;
+  height: 560px;
+  min-height: 478px;
+  background-color: #fff;
+  border: 1px solid #f7f7f7;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 190px;
+  top: 0;
+}
+
+/*右侧主体列*/
+.con-col1, .con-col2, .con-col3, .con-col4 {
+  height: 480px;
+  background-color: #fff;
+}
+
+.con-col1, .con-col2, .con-col3 {
+  margin-right: 10px;
+  float: left;
+}
+
+.con-col4 {
+  float: right;
+}
+
+.con-col1, .con-col2, .con-col4 {
+  width: 190px;
+}
+
+.con-col3 {
+  width: 590px;
 }
