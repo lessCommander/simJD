@@ -349,16 +349,27 @@
     position: absolute;
     left: 190px;
     top: 0;
+    display: none;
+    .sidebar-pop{
+        display: none;
+    }
 }
-.sidebar-pop1{
-    padding: 20px 0 10px 0;
+.sidebar-pop-wrap.hover{
+    display: block;
+    .sidebar-pop{
+        display: none;
+    }
+    .sidebar-pop.hover{
+        display: block;
+    }
 }
+
 .sidebar-pop-col1{
     width: 600px;
     float: left;
     .pop-title{
         padding: 5px;
-        margin-bottom: 5px;
+        margin: 15px 0 5px;
         overflow: hidden;
         font-size: 12px;
         a{
@@ -424,6 +435,23 @@
 .sidebar-pop-col2{
     width: 198px;
     float: left;
+    margin-top: 20px;
+    .sm-logo-wrap1{
+        overflow: hidden;
+        a{
+            width: 83px;
+            height: 35px;
+            float: left;
+            margin: 0 0 1px 1px;
+        }
+    }
+    .sm-logo-wrap2{
+        margin-top: 10px;
+        a{
+            display: block;
+            margin-top: 1px;
+        }
+    }
 }
 
 /*右侧主体列*/
