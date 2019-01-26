@@ -171,8 +171,49 @@
             color: #666;
             font-weight: bold;
             width: 140px;
-            padding: 0 5px;
         }
+    }
+}
+
+// 网站导航下拉菜单
+.webnav-dropdown{
+    position: relative;
+    .dropdown-menu{
+        @include sc-dropdown-wrap(1180px, -1012px);
+    }
+    .webnav-current{
+        @extend %sc-dropdown-cur;
+    }
+    .webnav-wrap{
+        float: left;
+        width: 350px;
+        margin: 5px 0;
+        padding-left: 10px;
+        text-align: left !important;
+        .webnav{
+            float: left;
+            margin: 0 5px;
+            width: 75px;
+            height: 25px;
+            a{
+                display: inline !important;
+                color: $grey;
+                &:hover {
+                    color: $hot-red;
+                    background-color: #fff;
+                }
+            }
+        }
+        .webnav-bold{
+            color: #666;
+            font-weight: bold;
+            width: 300px;
+            text-align: left;
+        }
+    }
+    .webnav-wrap+.webnav-wrap{
+        width: 260px;
+        border-left: 1px solid #eee;
     }
 }
 
@@ -267,6 +308,9 @@
             font-size: 10px;
             color: $grey;
             margin-left: 5px;
+            &:hover{
+                color: $hot-red;
+            }
         }
         .hot{
             color: $hot-red;
@@ -341,7 +385,7 @@
 /*左侧导航弹出菜单*/
 .sidebar-pop-wrap{
     width: 798px;
-    height: 560px;
+    /* height: 560px; */
     min-height: 478px;
     background-color: #fff;
     border: 1px solid #f7f7f7;

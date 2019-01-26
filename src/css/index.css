@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @import url(./base.css);
 /* sass自定义 */
-.city-dropdown .city-current, .myjd-dropdown .myjd-current, .cg-dropdown .cg-current, .customer-dropdown .customer-current {
+.city-dropdown .city-current, .myjd-dropdown .myjd-current, .cg-dropdown .cg-current, .customer-dropdown .customer-current, .webnav-dropdown .webnav-current {
   width: 60px;
   line-height: 29px;
   padding-left: 5px;
@@ -154,6 +154,7 @@
   z-index: 1;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   border-top-color: transparent;
   background-color: #fff;
   width: 337px;
@@ -165,12 +166,11 @@
   margin: 0 5px;
   width: 46px;
   height: 30px;
+  text-align: left !important;
 }
 
 .city-dropdown .city-wrap .city a {
-  display: block;
-  padding: 0 5px;
-  text-align: center;
+  display: inline !important;
   color: #999;
 }
 
@@ -190,6 +190,7 @@
   z-index: 1;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   border-top-color: transparent;
   background-color: #fff;
   width: 220px;
@@ -201,12 +202,11 @@
   margin: 0 5px;
   width: 100px;
   height: 26px;
+  text-align: left !important;
 }
 
 .myjd-dropdown .myjd-wrap .myjd a {
-  display: block;
-  padding: 0 5px;
-  text-align: left;
+  display: inline !important;
   color: #999;
 }
 
@@ -230,6 +230,7 @@
   z-index: 1;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   border-top-color: transparent;
   background-color: #fff;
   width: 180px;
@@ -241,12 +242,11 @@
   margin: 0 5px;
   width: 75px;
   height: 26px;
+  text-align: left !important;
 }
 
 .cg-dropdown .cg-wrap .cg a {
-  display: block;
-  padding: 0 5px;
-  text-align: left;
+  display: inline !important;
   color: #999;
 }
 
@@ -266,6 +266,7 @@
   z-index: 1;
   border-left: 1px solid #ddd;
   border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
   border-top-color: transparent;
   background-color: #fff;
   width: 160px;
@@ -277,12 +278,11 @@
   margin: 0 5px;
   width: 70px;
   height: 26px;
+  text-align: left !important;
 }
 
 .customer-dropdown .customer-wrap .customer a {
-  display: block;
-  padding: 0 5px;
-  text-align: left;
+  display: inline !important;
   color: #999;
 }
 
@@ -295,7 +295,61 @@
   color: #666;
   font-weight: bold;
   width: 140px;
-  padding: 0 5px;
+}
+
+.webnav-dropdown {
+  position: relative;
+}
+
+.webnav-dropdown .dropdown-menu {
+  position: absolute;
+  top: 30px;
+  left: -1012px;
+  z-index: 1;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  border-top-color: transparent;
+  background-color: #fff;
+  width: 1180px;
+  padding: 5px;
+}
+
+.webnav-dropdown .webnav-wrap {
+  float: left;
+  width: 350px;
+  margin: 5px 0;
+  padding-left: 10px;
+  text-align: left !important;
+}
+
+.webnav-dropdown .webnav-wrap .webnav {
+  float: left;
+  margin: 0 5px;
+  width: 75px;
+  height: 25px;
+}
+
+.webnav-dropdown .webnav-wrap .webnav a {
+  display: inline !important;
+  color: #999;
+}
+
+.webnav-dropdown .webnav-wrap .webnav a:hover {
+  color: #f10215;
+  background-color: #fff;
+}
+
+.webnav-dropdown .webnav-wrap .webnav-bold {
+  color: #666;
+  font-weight: bold;
+  width: 300px;
+  text-align: left;
+}
+
+.webnav-dropdown .webnav-wrap + .webnav-wrap {
+  width: 260px;
+  border-left: 1px solid #eee;
 }
 
 /*头部搜索栏*/
@@ -405,6 +459,10 @@
   margin-left: 5px;
 }
 
+.header-w .hotwords a:hover {
+  color: #f10215;
+}
+
 .header-w .hotwords .hot {
   color: #f10215;
 }
@@ -491,7 +549,7 @@
 /*左侧导航弹出菜单*/
 .sidebar-pop-wrap {
   width: 798px;
-  height: 560px;
+  /* height: 560px; */
   min-height: 478px;
   background-color: #fff;
   border: 1px solid #f7f7f7;
