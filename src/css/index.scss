@@ -350,6 +350,81 @@
     left: 190px;
     top: 0;
 }
+.sidebar-pop1{
+    padding: 20px 0 10px 0;
+}
+.sidebar-pop-col1{
+    width: 600px;
+    float: left;
+    .pop-title{
+        padding: 5px;
+        margin-bottom: 5px;
+        overflow: hidden;
+        font-size: 12px;
+        a{
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            color: #eee;
+            background-color: #333;
+            float: left;
+            padding: 2px 8px;
+            margin-left: 10px;
+            .icon-youjiantou{
+                font-size: 12px;
+                margin: 2px 0 0 2px;
+            }
+            &:hover{
+                background-color: #aaa;
+            }
+        }
+    }
+    .pop-content{
+        padding: 5px;
+        margin-bottom: 5px;
+        overflow: hidden;
+        font-size: 12px;
+        dl{
+            overflow: hidden;
+            padding-left: 80px;
+            position: relative;
+            margin-bottom: 5px;
+            dt{
+                position: absolute;
+                left: 0;
+                top: 6px;
+                width: 80px;
+                height: 18px;
+                line-height: 18px;
+                font-weight: 800;
+                text-align: right;
+                .icon-youjiantou{
+                    font-size: 12px;
+                    margin: 2px 0 0 2px;
+                }
+            }
+            dd{
+                height: 18px;
+                line-height: 18px;
+                text-align: center;
+                padding: 2px 8px;
+                margin: 3px 2px 3px 4px;
+                float: left;
+                border-left: 1px solid #ddd;
+            }
+            a{
+                color: #636363;
+                &:hover{
+                    color: $hot-red;
+                }
+            }
+        }
+    }
+}
+.sidebar-pop-col2{
+    width: 198px;
+    float: left;
+}
 
 /*右侧主体列*/
 .con-col1, .con-col2, .con-col3, .con-col4{
