@@ -37,7 +37,15 @@ import '../css/index.css';
                 this.startSlide(oImgs, this.sliderCurInx, ++this.sliderCurInx, oNavBars);
             }, 3000);
             
-        }
+        },
+        showMenu2(curInx, r2HotLine){
+            let leftArr=[0, 55];
+            for(let item of this){
+                item.classList.remove('hover');
+            }
+            this[curInx].classList.add('hover');
+            r2HotLine.style.left = leftArr[curInx] + 'px';
+        },
     };
 
     let init = function(){
@@ -50,7 +58,7 @@ import '../css/index.css';
 
         for(let item of dropdown){
             item.addEventListener('mouseover', handler.showMenu, false);
-            item.addEventListener('mouseleave', handler.hideMenu, false);
+            item.addEventListener('mouseout', handler.hideMenu, false);
         }
 
         // 左侧菜单
@@ -83,6 +91,15 @@ import '../css/index.css';
                 handler.startSlide(sliderItem, handler.sliderCurInx, handler.sliderCurInx = i, navBar);
             }, false);
             navBar[i].addEventListener('mouseout', ()=>handler.autoSlide(sliderItem, navBar), false);
+        }
+
+        // 登录/注册下的促销和公告tab
+        let r2Tabs = document.querySelectorAll('.row2-title-tab'),
+            r2Panes = document.querySelectorAll('.row2-pane'),
+            r2HotLine = document.querySelector('.hot-line');
+
+        for(let i = 0, len = r2Tabs.length; i < len; i++){
+            r2Tabs[i].addEventListener('mouseover', handler.showMenu2.bind(r2Panes, i, r2HotLine), false);
         }
     }
 

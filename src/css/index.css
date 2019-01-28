@@ -820,6 +820,17 @@
 /*第4列登录列*/
 .con-col4 {
   background-color: #fff;
+  box-sizing: border-box;
+  padding: 0 6px;
+}
+
+.con-col4 a {
+  font-size: 11px;
+  color: #666;
+}
+
+.con-col4 a:hover {
+  color: #f10215;
 }
 
 .row1 {
@@ -828,7 +839,6 @@
   height: 140px;
   position: relative;
   text-align: center;
-  font-size: 11px;
 }
 
 .row1 .login {
@@ -860,14 +870,6 @@
 
 .row1 .wel .wel-txt2 {
   margin-top: 5px;
-}
-
-.row1 .wel .wel-txt2 a {
-  color: #666;
-}
-
-.row1 .wel .wel-txt2 a:hover {
-  color: #f10215;
 }
 
 .row1 .welfare {
@@ -922,5 +924,302 @@
 }
 
 .row2 {
-  margin-top: 5px;
+  margin-top: 15px;
+  width: 100%;
+  height: 136px;
+}
+
+.row2-title {
+  width: 100%;
+  height: 26px;
+  position: relative;
+  overflow: hidden;
+}
+
+.row2-title a {
+  width: 30px;
+  text-align: center;
+  float: left;
+  height: 26px;
+  line-height: 26px;
+}
+
+.row2-title .row2-title-sp {
+  float: left;
+  width: 1px;
+  height: 16px;
+  margin: 5px 12px;
+  background-color: #e3e4e5;
+}
+
+.row2-title .row2-title-more {
+  float: right;
+}
+
+.row2-title .hot-line {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 2px;
+  background-color: #f10215;
+  transition: left .3s;
+}
+
+.row2-content {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.row2-content .row2-pane {
+  display: none;
+}
+
+.row2-content .row2-pane.hover {
+  display: block;
+}
+
+.row2-content li {
+  height: 25px;
+  line-height: 25px;
+}
+
+.row3 {
+  width: 100%;
+  margin-top: 15px;
+}
+
+/*下方4连轮播图*/
+.floor-wrap {
+  margin-top: 30px;
+  height: 275px;
+}
+
+.floor {
+  width: 1190px;
+  height: 100%;
+  background-color: #fff;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.floor .floor-col1 {
+  height: 100%;
+  float: left;
+}
+
+.floor .floor-col2 {
+  height: 100%;
+  float: left;
+}
+
+.floor .floor-col3 {
+  height: 100%;
+  float: left;
+}
+
+.floor-col1 {
+  width: 190px;
+  background-color: #e83632;
+  text-align: center;
+}
+
+.floor-col1 a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.floor-col1 a span {
+  display: block;
+}
+
+.floor-col1 a .floor-row1 {
+  margin-top: 40px;
+  font-size: 34px;
+  color: #eee;
+}
+
+.floor-col1 a .floor-row2 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: rgba(254, 254, 254, 0.4);
+}
+
+.floor-col1 a .floor-row3 {
+  margin-top: 10px;
+}
+
+.floor-col1 a .floor-row4 {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #eee;
+}
+
+.floor-col1 a .floor-row5 {
+  margin-top: 15px;
+}
+
+.floor-col1 a .floor-row5 ul {
+  width: 135px;
+  height: 40px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.floor-col1 a .floor-row5 ul li {
+  float: left;
+  width: 40px;
+  height: 100%;
+  line-height: 40px;
+  margin-left: 5px;
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.floor-col2 {
+  width: 800px;
+  background-color: aliceblue;
+  overflow: hidden;
+}
+
+.floor-col3 {
+  width: 200px;
+  padding: 7px 10px;
+  box-sizing: border-box;
+}
+
+.floor-col3 .floor-col3-wrap {
+  width: 180px;
+  height: 260px;
+  position: relative;
+  overflow: hidden;
+}
+
+.floor-col3-list {
+  width: 200%;
+  height: 100%;
+}
+
+.floor-col3-list .floor-col3-item {
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.floor-col3-list .floor-col3-item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.floor-col3-barlist {
+  position: absolute;
+  height: 20px;
+  width: 100%;
+  text-align: center;
+  left: 0;
+  bottom: 10px;
+}
+
+.floor-col3-barlist .floor-col3-bar {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background-color: #aaa;
+  border-radius: 50%;
+  margin: 0 3px;
+}
+
+.floor-col3-barlist .floor-col3-bar.hover {
+  background-color: #f10215;
+}
+
+/*底部信息 */
+.bottom-info-wrap {
+  margin-top: 30px;
+  height: 300px;
+  border-top: 1px solid #999;
+  text-align: center;
+}
+
+/*右侧工具栏*/
+.toolbar-wrap-fixed {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background-color: #7a6e6e;
+  border-right: 6px solid #7a6e6e;
+  z-index: 2020;
+}
+
+.toolbar-wrap {
+  height: 100%;
+  width: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #eee;
+}
+
+.toolbar-wrap .toolbar {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -180px;
+}
+
+.toolbar-wrap .toolbar-backtop {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.toolbar-wrap .toolbar-item {
+  width: 252px;
+  height: 35px;
+  background-color: #7a6e6e;
+  margin-top: 2px;
+  position: relative;
+  left: -35px;
+  border-radius: 6px;
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.toolbar-wrap .toolbar-item .iconfont {
+  width: 50px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 20;
+  transition: background-color .3s linear;
+}
+
+.toolbar-wrap .toolbar-item span {
+  position: absolute;
+  left: 35px;
+  top: 0;
+  z-index: 10;
+  background-color: #7a6e6e;
+  width: 252px;
+  height: 35px;
+  line-height: 35px;
+  padding-left: 6px;
+  transition: left .3s ease-in-out, background-color .3s linear;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.toolbar-wrap .toolbar-item:hover > .iconfont {
+  background-color: #c81623;
+}
+
+.toolbar-wrap .toolbar-item:hover > span {
+  left: -60px;
+  background-color: #c81623;
 }
