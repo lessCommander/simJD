@@ -1083,6 +1083,98 @@
   width: 800px;
   background-color: aliceblue;
   overflow: hidden;
+  position: relative;
+}
+
+.floor-col2 .floor-col2-list {
+  width: 300%;
+  height: 100%;
+  position: relative;
+}
+
+.floor-col2 .floor-col2-list .floor-col2-item-wrap {
+  width: 33.33333333%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+#nav-previous2, #nav-next2 {
+  width: 20px;
+  height: 40px;
+  margin-top: -20px;
+  color: #fff;
+  background-color: rgba(192, 192, 192, 0.3);
+}
+
+#nav-previous2:hover, #nav-next2:hover {
+  background-color: silver;
+}
+
+#nav-previous2 .iconfont, #nav-next2 .iconfont {
+  font-size: 11px;
+  margin-top: 12px;
+}
+
+.floor-col2-item {
+  width: 100%;
+  height: 100%;
+}
+
+.floor-col2-item li {
+  width: 25%;
+  height: 100%;
+  float: left;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-right: 1px solid #eee;
+  cursor: pointer;
+  text-align: center;
+  transition: opacity 200ms linear;
+}
+
+.floor-col2-item li:hover {
+  opacity: .7;
+}
+
+.floor-col2-item li a {
+  display: block;
+  width: 140px;
+  height: 140px;
+  text-align: center;
+  padding: 30px;
+}
+
+.floor-col2-item li .hori-txt {
+  font-size: 11px;
+  color: #636363;
+  text-align: center;
+}
+
+.floor-col2-item li .hori-price-wrap {
+  margin-top: 20px;
+  display: inline-block;
+  border: 1px solid #f10215;
+  position: relative;
+}
+
+.floor-col2-item li .hori-price-wrap .hori-price1 {
+  display: inline-block;
+  width: 80px;
+  height: 20px;
+  color: #fff;
+  background-color: #f10215;
+  font-weight: 700;
+}
+
+.floor-col2-item li .hori-price-wrap .hori-price2 {
+  display: inline-block;
+  width: 80px;
+  height: 20px;
+  color: #ccc;
+  background-color: #fff;
+  text-decoration: line-through;
 }
 
 .floor-col3 {
@@ -1096,17 +1188,21 @@
   height: 260px;
   position: relative;
   overflow: hidden;
+  cursor: default;
 }
 
 .floor-col3-list {
   width: 200%;
   height: 100%;
+  position: relative;
 }
 
 .floor-col3-list .floor-col3-item {
   width: 50%;
   height: 100%;
-  float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .floor-col3-list .floor-col3-item a {
@@ -1118,10 +1214,10 @@
 .floor-col3-barlist {
   position: absolute;
   height: 20px;
-  width: 100%;
-  text-align: center;
-  left: 0;
+  width: 30px;
+  left: 50%;
   bottom: 10px;
+  margin-left: -15px;
 }
 
 .floor-col3-barlist .floor-col3-bar {
