@@ -191,6 +191,20 @@ import '../css/index.css';
 
         preImg.addEventListener('click', handler.fourJoinSlide.bind(null, fourImgs, fourImgWidth, 1),false);
         nextImg.addEventListener('click', handler.fourJoinSlide.bind(null, fourImgs, fourImgWidth, -1),false);
+
+        /* 顶部工具栏 */
+        let fixedTop = document.querySelector('.header-fixed');
+
+        $(window).on('scroll', function(){
+            let top = $(document).scrollTop();
+            if(top > 160){
+                $(fixedTop).slideDown(100, 'linear');
+            }else{
+                $(fixedTop).slideUp(100, 'linear');
+            }
+            
+            
+        });
     }
 
     init();
