@@ -1,4 +1,5 @@
 import '../css/index.css';
+import '../css/iconfont.css';
 
 (function(){
     let handler = {

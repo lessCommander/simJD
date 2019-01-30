@@ -24,7 +24,13 @@ module.exports = {
             },
             {
                 test: /\.(eot|ttf|woff|svg)$/,
-                use: 'file-loader'
+                // use: 'file-loader'
+                use: {
+                    loader: 'file-loader',
+                    options:{
+                        name:'fonts/[name].[hash:8].[ext]'
+                    }
+                }
             },
             {
                 test: /\.(htm|html)$/,
