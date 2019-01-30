@@ -3,7 +3,7 @@ let path = require('path'),
     ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
+    mode: 'production',
     entry: './src/js/index.js',
     output: {
         path: path.join(__dirname, 'dist'),
@@ -41,7 +41,12 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: "src/index.html"
+            template: "src/index.html",
+            minify: {
+                removeAttributeQuotes: true,
+                collapseWhitespace: true,
+                removeComments: true
+            }
         }),
         new ExtractTextPlugin("index.css")
     ], // 配置html,css插件
